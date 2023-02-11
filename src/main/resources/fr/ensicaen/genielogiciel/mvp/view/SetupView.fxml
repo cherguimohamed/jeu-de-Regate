@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<GridPane fx:id="_base" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.ensicaen.genielogiciel.mvp.view.SetupView">
+<columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+</columnConstraints>
+<rowConstraints>
+    <RowConstraints minHeight="50.0" vgrow="NEVER" />
+    <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="NEVER" />
+    <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="NEVER" />
+</rowConstraints>
+<children>
+    <Label alignment="CENTER" prefHeight="16.0" prefWidth="160.0" styleClass="text" text="%setup.boat.text" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <ChoiceBox fx:id="_choiceBoat" GridPane.halignment="CENTER" GridPane.columnSpan="2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+    </ChoiceBox>
+
+    <Label alignment="CENTER" prefHeight="16.0" prefWidth="160.0" styleClass="text" text="%setup.course.text" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <ChoiceBox fx:id="_choiceCourse" GridPane.halignment="CENTER" GridPane.columnSpan="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+    </ChoiceBox>
+
+    <Label alignment="CENTER" prefHeight="16.0" prefWidth="160.0" styleClass="text" text="%setup.sail.text" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <RadioButton fx:id="_sailUsual" text="%setup.sail.usual.text" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <HBox.margin>
+            <Insets right="3.0"/>
+        </HBox.margin>
+        <toggleGroup>
+            <ToggleGroup fx:id="_sailGroup"/>
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="_qailBig" text="%setup.sail.big.text" GridPane.columnIndex="2" GridPane.rowIndex="3">
+        <HBox.margin>
+            <Insets right="30.0"/>
+            <Insets bottom="10.0"/>
+        </HBox.margin>
+        <toggleGroup>
+            <fx:reference source="_sailGroup"/>
+        </toggleGroup>
+    </RadioButton>
+
+
+    <Label alignment="CENTER" prefHeight="16.0" prefWidth="160.0" styleClass="text" text="%setup.crewmate.text" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <RadioButton fx:id="_crewTwo" text="%setup.crewmate.2.text" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <HBox.margin>
+            <Insets right="3.0"/>
+        </HBox.margin>
+        <toggleGroup>
+            <ToggleGroup fx:id="_crewGroup"/>
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="_crewFour" text="%setup.crewmate.4.text" GridPane.columnIndex="2" GridPane.rowIndex="4">
+        <HBox.margin>
+            <Insets right="30.0"/>
+            <Insets bottom="10.0"/>
+        </HBox.margin>
+        <toggleGroup>
+            <fx:reference source="_crewGroup"/>
+        </toggleGroup>
+    </RadioButton>
+
+    <Label alignment="CENTER" prefHeight="16.0" prefWidth="160.0" styleClass="text" text="" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <Button defaultButton="true" onAction="#onClickOnStartGame" prefWidth="200.0" text="%setup.launch.text" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="6"/>
+    <Label fx:id="_errorMessage" textFill="#ef0000" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7"/>
+</children>
+<padding>
+    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+</padding>
+</GridPane>
+

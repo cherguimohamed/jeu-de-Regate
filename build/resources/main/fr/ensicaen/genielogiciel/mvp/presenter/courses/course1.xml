@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<course>
+    <buoys nb="3">
+        <buoy id="1" x="200" y="300"/>
+        <buoy id="2" x="400" y="150"/>
+        <buoy id="3" x="400" y="450"/>
+    </buoys>
+    <checkpoints nb="3">
+        <checkpoint id="1" x="410" y="140" width="150" height="20"/>
+        <checkpoint id="2" x="40" y="290" width="150" height="20"/>
+        <checkpoint id="3" x="410" y="440" width="150" height="20"/>
+    </checkpoints>
+    <playerBoat x="450" y="450" direction="0"/>
+    <coastLine x="700"/>
+    <wind direction="50" strength="10"/>
+</course>
